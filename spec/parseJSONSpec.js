@@ -1,5 +1,5 @@
 // test cases are described in fixtures.js
-describe("parseJSON", function(){
+xdescribe("parseJSON", function(){
 
   it("should match the result of calling JSON.parse", function(){
     validObjects.forEach(function(obj){
