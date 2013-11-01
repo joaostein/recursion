@@ -25,7 +25,7 @@ var stringifyJSON = function (obj) {
       if (typeof(value) !== "function" && value !== undefined) {
         if (type == "string") {
           value = '"' + value + '"';
-        } else if (type == "object" && value !== null) {
+        } else if (type === "object" && value !== null) {
           value = stringifyJSON(value);
         }
         json.push((arr ? "" : '"' + key + '":') + String(value));
