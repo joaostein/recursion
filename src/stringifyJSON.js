@@ -12,7 +12,7 @@ var stringifyJSON = function (obj) {
       obj = '"' + obj + '"';
     }
 
-    return String(obj);
+    return obj + '';
 
   } else {
     var value;
@@ -23,7 +23,7 @@ var stringifyJSON = function (obj) {
       value = obj[key];
       
       if (typeof(value) !== "function" && value !== undefined) {
-        if (type == "string") {
+        if (type === "string") {
           value = '"' + value + '"';
         } else if (type === "object" && value !== null) {
           value = stringifyJSON(value);
